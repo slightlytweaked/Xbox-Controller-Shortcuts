@@ -71,6 +71,23 @@ open "Xbox Controller Shortcuts.app"
 
 Or double-click the app in Finder.
 
+## Download
+
+For end users, the easiest way to install the app is from GitHub Releases.
+
+1. Download the latest `Xbox-Controller-Shortcuts-<version>-macOS.zip`
+2. Unzip it
+3. Move `Xbox Controller Shortcuts.app` wherever you want
+4. Open the app
+
+If macOS warns about the app on first launch, use `Open` from Finder or right-click the app and choose `Open`.
+
+To create a release zip locally:
+
+```bash
+zsh package-release.sh v0.1.0
+```
+
 ## Permissions
 
 The app needs permission in:
@@ -100,9 +117,10 @@ Legacy helper scripts from earlier prototypes are still included in the repo, bu
 Suggested public release flow:
 
 1. Push this repository to GitHub.
-2. Build `Xbox Controller Shortcuts.app`.
-3. Zip the app bundle.
-4. Upload the zip as a GitHub Release asset.
+2. Run `zsh package-release.sh v0.1.0`
+3. Create a GitHub Release with tag `v0.1.0`
+4. Upload the generated zip as a Release asset
+5. Paste the contents of `RELEASE_NOTES_v0.1.0.md` into the release notes if helpful
 
 ## License
 
