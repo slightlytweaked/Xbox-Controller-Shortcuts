@@ -110,7 +110,7 @@ The app stores runtime data here:
 - `app-template-start-Info.plist`: app bundle metadata
 - `config.sample.json`: sample config reference
 
-Legacy helper scripts from earlier prototypes are still included in the repo, but the current primary app is the menu bar app built by `build-app.sh`.
+The `legacy/` folder contains earlier prototype launchers and CLI experiments kept for reference. The current primary app is the menu bar app built by `build-app.sh`.
 
 ## Publishing
 
