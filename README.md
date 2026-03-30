@@ -93,8 +93,10 @@ zsh package-release.sh v0.1.0
 The app needs permission in:
 
 - `System Settings > Privacy & Security > Accessibility`
+- `System Settings > Privacy & Security > Input Monitoring`
 
 If the menu shows `Accessibility Needed`, remove the app from the Accessibility list, add it again, then relaunch it.
+If input still does not work after that, also confirm the app is enabled in `Input Monitoring` and relaunch it.
 
 ## Config And Logs
 

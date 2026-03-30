@@ -987,6 +987,10 @@ typedef NS_ENUM(NSInteger, XCActionType) {
     openAccessibility.target = self;
     [menu addItem:openAccessibility];
 
+    NSMenuItem *openInputMonitoring = [[NSMenuItem alloc] initWithTitle:@"Open Input Monitoring Settings" action:@selector(openInputMonitoringSettings:) keyEquivalent:@""];
+    openInputMonitoring.target = self;
+    [menu addItem:openInputMonitoring];
+
     NSMenuItem *openLog = [[NSMenuItem alloc] initWithTitle:@"Open Log" action:@selector(openLog:) keyEquivalent:@""];
     openLog.target = self;
     [menu addItem:openLog];
@@ -1053,9 +1057,9 @@ typedef NS_ENUM(NSInteger, XCActionType) {
         configLabel.toolTip = self.configStore.configPath;
         [content addSubview:configLabel];
 
-        NSTextField *licenseLabel = [NSTextField labelWithString:@"MIT License"];
+        NSTextField *licenseLabel = [NSTextField labelWithString:@"Requires Accessibility and Input Monitoring permission"];
         licenseLabel.textColor = NSColor.secondaryLabelColor;
-        licenseLabel.frame = NSMakeRect(28, 40, 120, 18);
+        licenseLabel.frame = NSMakeRect(28, 40, 320, 18);
         [content addSubview:licenseLabel];
 
         NSButton *repoButton = [[NSButton alloc] initWithFrame:NSMakeRect(28, 12, 180, 24)];
@@ -1082,6 +1086,13 @@ typedef NS_ENUM(NSInteger, XCActionType) {
 
 - (void)openAccessibilitySettings:(id)sender {
     NSURL *url = [NSURL URLWithString:@"x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility"];
+    if (url != nil) {
+        [[NSWorkspace sharedWorkspace] openURL:url];
+    }
+}
+
+- (void)openInputMonitoringSettings:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"x-apple.systempreferences:com.apple.preference.security?Privacy_ListenEvent"];
     if (url != nil) {
         [[NSWorkspace sharedWorkspace] openURL:url];
     }
