@@ -1,0 +1,20 @@
+{
+  "repeatDelayMilliseconds": 250,
+  "mappings": {
+    "dpad_up": { "modifiers": [], "key": "up" },
+    "dpad_down": { "modifiers": [], "key": "down" },
+    "dpad_left": { "modifiers": [], "key": "left" },
+    "dpad_right": { "modifiers": [], "key": "right" },
+    "lb": { "modifiers": [], "key": "scroll_down" },
+    "lt": { "modifiers": [], "key": "scroll_up" },
+    "rb": { "modifiers": [], "key": "space" },
+    "rt": { "modifiers": ["shift"], "key": "space" },
+    "y": { "modifiers": [], "key": "pageup" },
+    "a": { "modifiers": [], "key": "pagedown" },
+    "x": { "modifiers": ["command"], "key": "[" },
+    "b": { "modifiers": ["command"], "key": "]" },
+    "view": { "modifiers": [], "key": "" },
+    "menu": { "modifiers": [], "key": "" },
+    "home": { "modifiers": [], "key": "" }
+  }
+}

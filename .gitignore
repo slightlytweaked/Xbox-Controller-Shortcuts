@@ -1,0 +1,15 @@
+.DS_Store
+.build/
+*.log
+*.zip
+
+# Local app bundles and binaries
+*.app/
+xbox-controller-shortcuts
+
+# Local config and runtime data
+config.json
+
+# macOS / Xcode user state
+xcuserdata/
+DerivedData/
