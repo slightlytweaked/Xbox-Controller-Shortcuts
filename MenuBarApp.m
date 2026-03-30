@@ -780,7 +780,7 @@ typedef NS_ENUM(NSInteger, XCActionType) {
     title.frame = NSMakeRect(24, 670, 320, 28);
     [content addSubview:title];
 
-    NSBox *infoBox = [[NSBox alloc] initWithFrame:NSMakeRect(24, 574, 872, 76)];
+    NSBox *infoBox = [[NSBox alloc] initWithFrame:NSMakeRect(24, 548, 872, 102)];
     infoBox.boxType = NSBoxCustom;
     infoBox.transparent = NO;
     infoBox.borderWidth = 0;
@@ -788,25 +788,25 @@ typedef NS_ENUM(NSInteger, XCActionType) {
     infoBox.cornerRadius = 10.0;
     [content addSubview:infoBox];
 
-    NSTextField *hint = XCWrappedLabel(@"Enter a plain key like a, b, [, ], up, down, pageup, pagedown, return, or space. For shortcuts, choose Shortcut and add modifiers such as Cmd or Shift.", NSMakeRect(16, 42, 840, 24), NSColor.labelColor, [NSFont systemFontOfSize:13 weight:NSFontWeightMedium]);
+    NSTextField *hint = XCWrappedLabel(@"Enter a plain key like a, b, [, ], up, down, pageup, pagedown, return, or space. For shortcuts, choose Shortcut and add modifiers such as Cmd or Shift.", NSMakeRect(16, 60, 840, 32), NSColor.labelColor, [NSFont systemFontOfSize:13 weight:NSFontWeightMedium]);
     [infoBox addSubview:hint];
 
-    NSTextField *subHint = XCWrappedLabel(@"If you use a non-English keyboard layout or input method, typed characters are normalized to the matching physical QWERTY key when possible.", NSMakeRect(16, 22, 840, 20), NSColor.secondaryLabelColor, [NSFont systemFontOfSize:12]);
+    NSTextField *subHint = XCWrappedLabel(@"If you use a non-English keyboard layout or input method, typed characters are normalized to the matching physical QWERTY key when possible.", NSMakeRect(16, 34, 840, 22), NSColor.secondaryLabelColor, [NSFont systemFontOfSize:12]);
     [infoBox addSubview:subHint];
 
-    NSTextField *koreanHint = XCWrappedLabel(@"한글 등 영문이 아닌 입력 상태에서도 가능하면 같은 위치의 QWERTY 키로 자동 보정됩니다. 단축키를 만들려면 Shortcut을 선택한 뒤 Cmd, Shift 같은 수정 키를 함께 지정하세요.", NSMakeRect(16, 4, 840, 20), NSColor.secondaryLabelColor, [NSFont systemFontOfSize:12]);
+    NSTextField *koreanHint = XCWrappedLabel(@"한글 등 영문이 아닌 입력 상태에서도 가능하면 같은 위치의 QWERTY 키로 자동 보정됩니다. 단축키를 만들려면 Shortcut을 선택한 뒤 Cmd, Shift 같은 수정 키를 함께 지정하세요.", NSMakeRect(16, 10, 840, 22), NSColor.secondaryLabelColor, [NSFont systemFontOfSize:12]);
     [infoBox addSubview:koreanHint];
 
     NSTextField *repeatLabel = [NSTextField labelWithString:@"Repeat delay (ms)"];
-    repeatLabel.frame = NSMakeRect(24, 536, 110, 20);
+    repeatLabel.frame = NSMakeRect(24, 510, 110, 20);
     [content addSubview:repeatLabel];
 
-    self.repeatDelayField = [[NSTextField alloc] initWithFrame:NSMakeRect(144, 532, 80, 26)];
+    self.repeatDelayField = [[NSTextField alloc] initWithFrame:NSMakeRect(144, 506, 80, 26)];
     self.repeatDelayField.target = self;
     self.repeatDelayField.action = @selector(repeatDelayChanged:);
     [content addSubview:self.repeatDelayField];
 
-    NSButton *resetButton = [[NSButton alloc] initWithFrame:NSMakeRect(240, 529, 132, 30)];
+    NSButton *resetButton = [[NSButton alloc] initWithFrame:NSMakeRect(240, 503, 132, 30)];
     resetButton.title = @"Reset Defaults";
     resetButton.bezelStyle = NSBezelStyleRounded;
     resetButton.target = self;
@@ -814,36 +814,36 @@ typedef NS_ENUM(NSInteger, XCActionType) {
     [content addSubview:resetButton];
 
     NSTextField *headerButton = [NSTextField labelWithString:@"Button"];
-    headerButton.frame = NSMakeRect(38, 502, 90, 16);
+    headerButton.frame = NSMakeRect(38, 476, 90, 16);
     headerButton.font = [NSFont systemFontOfSize:11 weight:NSFontWeightSemibold];
     headerButton.textColor = NSColor.secondaryLabelColor;
     [content addSubview:headerButton];
 
     NSTextField *headerAction = [NSTextField labelWithString:@"Action"];
-    headerAction.frame = NSMakeRect(164, 502, 90, 16);
+    headerAction.frame = NSMakeRect(164, 476, 90, 16);
     headerAction.font = [NSFont systemFontOfSize:11 weight:NSFontWeightSemibold];
     headerAction.textColor = NSColor.secondaryLabelColor;
     [content addSubview:headerAction];
 
     NSTextField *headerKey = [NSTextField labelWithString:@"Key"];
-    headerKey.frame = NSMakeRect(322, 502, 90, 16);
+    headerKey.frame = NSMakeRect(322, 476, 90, 16);
     headerKey.font = [NSFont systemFontOfSize:11 weight:NSFontWeightSemibold];
     headerKey.textColor = NSColor.secondaryLabelColor;
     [content addSubview:headerKey];
 
     NSTextField *headerModifiers = [NSTextField labelWithString:@"Modifiers"];
-    headerModifiers.frame = NSMakeRect(486, 502, 120, 16);
+    headerModifiers.frame = NSMakeRect(486, 476, 120, 16);
     headerModifiers.font = [NSFont systemFontOfSize:11 weight:NSFontWeightSemibold];
     headerModifiers.textColor = NSColor.secondaryLabelColor;
     [content addSubview:headerModifiers];
 
     NSTextField *headerState = [NSTextField labelWithString:@"State"];
-    headerState.frame = NSMakeRect(808, 502, 60, 16);
+    headerState.frame = NSMakeRect(808, 476, 60, 16);
     headerState.font = [NSFont systemFontOfSize:11 weight:NSFontWeightSemibold];
     headerState.textColor = NSColor.secondaryLabelColor;
     [content addSubview:headerState];
 
-    NSScrollView *scrollView = [[NSScrollView alloc] initWithFrame:NSMakeRect(24, 82, 872, 410)];
+    NSScrollView *scrollView = [[NSScrollView alloc] initWithFrame:NSMakeRect(24, 82, 872, 384)];
     scrollView.hasVerticalScroller = YES;
     scrollView.borderType = NSBezelBorder;
     [content addSubview:scrollView];
@@ -924,6 +924,7 @@ typedef NS_ENUM(NSInteger, XCActionType) {
 @property (nonatomic, strong) XCControllerBridge *bridge;
 @property (nonatomic, strong) XCSettingsWindowController *settingsWindowController;
 @property (nonatomic, strong) NSDictionary *currentConfig;
+@property (nonatomic, strong) NSWindowController *aboutWindowController;
 @end
 
 @implementation XCAppDelegate
@@ -974,6 +975,10 @@ typedef NS_ENUM(NSInteger, XCActionType) {
     openSettings.target = self;
     [menu addItem:openSettings];
 
+    NSMenuItem *aboutItem = [[NSMenuItem alloc] initWithTitle:@"About Xbox Controller Shortcuts" action:@selector(openAbout:) keyEquivalent:@""];
+    aboutItem.target = self;
+    [menu addItem:aboutItem];
+
     self.toggleItem = [[NSMenuItem alloc] initWithTitle:@"Pause Mapping" action:@selector(toggleMapping:) keyEquivalent:@""];
     self.toggleItem.target = self;
     [menu addItem:self.toggleItem];
@@ -1019,6 +1024,54 @@ typedef NS_ENUM(NSInteger, XCActionType) {
     [NSApp activateIgnoringOtherApps:YES];
 }
 
+- (void)openAbout:(id)sender {
+    if (self.aboutWindowController == nil) {
+        NSWindow *window = [[NSWindow alloc] initWithContentRect:NSMakeRect(0, 0, 420, 250)
+                                                       styleMask:(NSWindowStyleMaskTitled | NSWindowStyleMaskClosable)
+                                                         backing:NSBackingStoreBuffered
+                                                           defer:NO];
+        window.title = @"About Xbox Controller Shortcuts";
+        window.releasedWhenClosed = NO;
+
+        NSView *content = window.contentView;
+
+        NSTextField *title = [NSTextField labelWithString:@"Xbox Controller Shortcuts"];
+        title.font = [NSFont boldSystemFontOfSize:24];
+        title.frame = NSMakeRect(28, 184, 320, 30);
+        [content addSubview:title];
+
+        NSTextField *subtitle = XCWrappedLabel(@"A macOS menu bar app for mapping Xbox controller buttons to keys, shortcuts, and scroll actions.", NSMakeRect(28, 136, 360, 40), NSColor.secondaryLabelColor, [NSFont systemFontOfSize:13]);
+        [content addSubview:subtitle];
+
+        NSString *version = [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"] ?: @"1.0";
+        NSTextField *versionLabel = [NSTextField labelWithString:[NSString stringWithFormat:@"Version %@", version]];
+        versionLabel.textColor = NSColor.secondaryLabelColor;
+        versionLabel.frame = NSMakeRect(28, 108, 120, 18);
+        [content addSubview:versionLabel];
+
+        NSTextField *configLabel = XCWrappedLabel([NSString stringWithFormat:@"Config: %@", self.configStore.configPath], NSMakeRect(28, 62, 360, 34), NSColor.secondaryLabelColor, [NSFont systemFontOfSize:12]);
+        configLabel.toolTip = self.configStore.configPath;
+        [content addSubview:configLabel];
+
+        NSTextField *licenseLabel = [NSTextField labelWithString:@"MIT License"];
+        licenseLabel.textColor = NSColor.secondaryLabelColor;
+        licenseLabel.frame = NSMakeRect(28, 40, 120, 18);
+        [content addSubview:licenseLabel];
+
+        NSButton *repoButton = [[NSButton alloc] initWithFrame:NSMakeRect(28, 12, 180, 24)];
+        repoButton.title = @"Open GitHub Repository";
+        repoButton.bezelStyle = NSBezelStyleRounded;
+        repoButton.target = self;
+        repoButton.action = @selector(openRepository:);
+        [content addSubview:repoButton];
+
+        self.aboutWindowController = [[NSWindowController alloc] initWithWindow:window];
+    }
+
+    [self.aboutWindowController showWindow:nil];
+    [NSApp activateIgnoringOtherApps:YES];
+}
+
 - (void)toggleMapping:(id)sender {
     [self.bridge setBridgeActive:!self.bridge.active];
 }
@@ -1029,6 +1082,13 @@ typedef NS_ENUM(NSInteger, XCActionType) {
 
 - (void)openAccessibilitySettings:(id)sender {
     NSURL *url = [NSURL URLWithString:@"x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility"];
+    if (url != nil) {
+        [[NSWorkspace sharedWorkspace] openURL:url];
+    }
+}
+
+- (void)openRepository:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"https://github.com/slightlytweaked/Xbox-Controller-Shortcuts"];
     if (url != nil) {
         [[NSWorkspace sharedWorkspace] openURL:url];
     }
